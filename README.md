@@ -32,12 +32,12 @@ To run the Travel Advisor - Restaurant Finder project after downloading it from 
 
 2. Clone the repository: Open a terminal or command prompt and run the following command to clone the repository:
    ```
-   git clone https://github.com/your-username/travel-advisor.git
+   git clone https://github.com/Akul16/JS-XML_Project.git
    ```
 
 3. Install dependencies: Change into the project directory and install the required dependencies using npm (Node Package Manager):
    ```
-   cd travel-advisor
+   cd JS-XML_Project
    npm install
    ```
 
