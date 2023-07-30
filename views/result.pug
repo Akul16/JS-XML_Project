@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    title= `Restaurants in ${city}`
+    block scripts
+        link(rel='stylesheet', href='/styles.css', type="text/css")
+  body
+    nav.navbar
+      a.logo(href='/') Restaurant Search
+      .weather
+        p Weather: #{weather.description}
+        img.weather-icon(src=`http://openweathermap.org/img/w/${weather.icon}.png`, title=weather.iconDesc, alt=weather.iconDesc)
+        p Temperature: #{weather.temperature}°C
+    h1.search Restaurants in #{city}
+        a(href='/') Search again
+    if weather
+    if restaurants.length > 0
+      ul.card-list
+        each restaurant in restaurants
+          li.card-item
+            .card-content
+              h2= restaurant.name
+              if restaurant.location && restaurant.location.address1
+                p= restaurant.location.address1
+              else
+                p Address not available
+              if restaurant.phone
+                p Phone: #{restaurant.phone}
+              else
+                p Phone not available
+              if restaurant.rating
+                p Rating: #{restaurant.rating}
+              else
+                p Rating not available
+    else
+      p No restaurants found in #{city}

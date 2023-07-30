@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title Restaurant Search
+    block scripts
+        link(rel='stylesheet', href='/styles.css', type="text/css")
+  body
+    nav.navbar
+      a.logo(href='/') Restaurant Search
+    form(action='/restaurants' method='get')
+      label(for='city') Enter City Name
+      input#city(type='text' name='city' required)
+      button(type='submit') Search
